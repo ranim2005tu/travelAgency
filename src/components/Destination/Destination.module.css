@@ -1,0 +1,105 @@
+
+.destination {
+    background-color: white;
+    border: 1px solid #edf1f3;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(23, 61, 85, 0.08);
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.destination:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(23, 61, 85, 0.14);
+}
+
+.imageWrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+
+.destination:hover .image {
+    transform: scale(1.04);
+}
+
+.badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #173d55;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.content {
+    padding: 20px;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    color: #0b9992;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.location span:last-child {
+    color: #d88910;
+}
+
+.titre {
+    color: #173D55;
+    margin: 8px 0 12px;
+    font-size: 25px;
+}
+
+.description {
+    margin: 0 0 18px;
+    color: #6c7d8a;
+    line-height: 1.65;
+}
+
+.footerCard {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #edf1f3;
+}
+
+.footerCard > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.priceLabel {
+    color: #87949e;
+    font-size: 12px;
+}
+
+.prix {
+    color: #173d55;
+    font-size: 21px;
+}
+
+.detailsButton {
+    min-height: 40px;
+    border: 0;
+    border-radius: 999px;
+    padding: 0 16px;
+    background: #eef8f7;
+    color: #0b9992;
+    font-weight: 800;
+    cursor: pointer;
+}
