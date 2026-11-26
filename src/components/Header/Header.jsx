@@ -1,20 +1,17 @@
-import Style from "./Header.module.css";
-
+import style from './Header.module.css';
+import {NavLink} from 'react-router-dom';
 function Header() {
     return (
-        <header className={Style.header}>
-            <a className={Style.brand} href="#" aria-label="Travel Agency - Accueil">
-                <span className={Style.brandMark}>T</span>
-                <span>Travel <strong>Agency</strong></span>
-            </a>
-            <nav className={Style.nav}>
-                <a href="#">Accueil</a>
-                <a href="#destinations">Destinations</a>
-                <a href="#reservation">Réservation</a>
+        <header className={style.header}>
+            <h1>travel agency</h1>
+            <nav className={style.nav}>
+                <NavLink to="/" className={({isActive}) => isActive ? style.active : ''}>Accueil</NavLink>
+                <NavLink to="/apropos" className={({isActive}) => isActive ? style.active : ''}>À propos</NavLink>
+                <NavLink to="/destinations" className={({isActive}) => isActive ? style.active : ''}>Destinations</NavLink>
+                <NavLink to="/reservation" className={({isActive}) => isActive ? style.active : ''}>Réservation</NavLink>
             </nav>
-            <a className={Style.cta} href="#reservation">Planifier mon voyage</a>
         </header>
-    );
+    
+    )
 }
-
 export default Header;
